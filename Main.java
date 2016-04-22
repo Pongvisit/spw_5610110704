@@ -14,10 +14,11 @@ public class Main {
 		SpaceShip v = new SpaceShip(180, 550, 20, 20);
 		GamePanel gp = new GamePanel();
 		GameEngine engine = new GameEngine(gp, v);
-		//frame.addKeyListener(engine);
+		frame.addKeyListener(engine);
 		frame.getContentPane().add(gp, BorderLayout.CENTER);
+		frame.getContentPane().setBackground(Color.BLACK);
 		frame.setVisible(true);
 		
-		//engine.start();
+		engine.start();
 	}
 }

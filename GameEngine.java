@@ -100,7 +100,7 @@ public class GameEngine {
 	public long getScore(){
 		return score;
 	}
-	
+	*/
 	@Override
 	public void keyPressed(KeyEvent e) {
 		controlVehicle(e);
@@ -115,5 +115,5 @@ public class GameEngine {
 	@Override
 	public void keyTyped(KeyEvent e) {
 		//do nothing		
-	}*/
+	}
 }
