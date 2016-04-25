@@ -5,30 +5,30 @@ import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.geom.Rectangle2D;
-//import java.util.ArrayList;
-//import java.util.Iterator;
+import java.util.ArrayList;
+import java.util.Iterator;
 
-//import javax.swing.Timer;
+import javax.swing.Timer;
 
 
-public class GameEngine {
+public class GameEngine implements KeyListener, GameReporter{
 	GamePanel gp;
 		
-	//private ArrayList<Enemy> enemies = new ArrayList<Enemy>();	
+	private ArrayList<Enemy> enemies = new ArrayList<Enemy>();	
 	private SpaceShip v;	
 	
-	//private Timer timer;
+	private Timer timer;
 	
 	//private long score = 0;
-	//private double difficulty = 0.1;
+		private double difficulty = 0.1;
 	
 	public GameEngine(GamePanel gp, SpaceShip v) {
 		this.gp = gp;
 		this.v = v;		
 		
 		gp.sprites.add(v);
-	}
-		/*timer = new Timer(50, new ActionListener() {
+		
+		timer = new Timer(50, new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
@@ -41,9 +41,9 @@ public class GameEngine {
 	
 	public void start(){
 		timer.start();
-	}*/
+	}
 	
-	/*private void generateEnemy(){
+	private void generateEnemy(){
 		Enemy e = new Enemy((int)(Math.random()*390), 30);
 		gp.sprites.add(e);
 		enemies.add(e);
@@ -62,7 +62,7 @@ public class GameEngine {
 			if(!e.isAlive()){
 				e_iter.remove();
 				gp.sprites.remove(e);
-				score += 100;
+				//score += 100;
 			}
 		}
 		
@@ -100,7 +100,7 @@ public class GameEngine {
 	public long getScore(){
 		return score;
 	}
-	*/
+	
 	@Override
 	public void keyPressed(KeyEvent e) {
 		controlVehicle(e);
