@@ -1,5 +1,3 @@
-package f2.spw;
-
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
@@ -20,7 +18,7 @@ public class GamePanel extends JPanel {
 		big.setBackground(Color.BLACK);
 	}
 
-	/*public void updateGameUI(GameReporter reporter){
+	public void updateGameUI(GameReporter reporter){
 		big.clearRect(0, 0, 400, 600);
 		
 		big.setColor(Color.WHITE);		
@@ -30,12 +28,12 @@ public class GamePanel extends JPanel {
 		}
 		
 		repaint();
-	}*/
+	}
 
-	/*@Override
+	@Override
 	public void paint(Graphics g) {
 		Graphics2D g2d = (Graphics2D) g;
 		g2d.drawImage(bi, null, 0, 0);
-	}*/
-
+	}
+	
 }
