@@ -6,7 +6,7 @@ import javax.swing.JFrame;
 
 public class Main {
 	public static void main(String[] args){
-		JFrame frame = new JFrame("Space War");
+		JFrame frame = new JFrame("Ragnarok");
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setSize(400, 650);
 		frame.getContentPane().setLayout(new BorderLayout());
@@ -16,8 +16,9 @@ public class Main {
 		GameEngine engine = new GameEngine(gp, v);
 		frame.addKeyListener(engine);
 		frame.getContentPane().add(gp, BorderLayout.CENTER);
+		frame.getContentPane().setBackground(Color.BLACK);
 		frame.setVisible(true);
-		
+		new Music();
 		engine.start();
 	}
 }
